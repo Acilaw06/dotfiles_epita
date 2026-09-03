@@ -21,3 +21,4 @@ signature
 slrnrc
 vimrc
 .gitmodules
+vim/
