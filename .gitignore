@@ -1,3 +1,4 @@
+bashrc
 mozilla/
 thunderbird/
 ssh/
@@ -9,6 +10,7 @@ config/dconf/
 config/mimeapps.list
 config/pulse/
 config/xfce4/
+config/.keep
 vim/.netrwhist
 Xdefaults
 emacs
