@@ -10,3 +10,14 @@ config/mimeapps.list
 config/pulse/
 config/xfce4/
 vim/.netrwhist
+Xdefaults
+emacs
+gitconfig
+gitignore
+jnewsrc
+msmtprc
+muttrc
+signature
+slrnrc
+vimrc
+
