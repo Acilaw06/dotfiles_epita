@@ -1,2 +1,12 @@
 mozilla/
 thunderbird/
+ssh/
+config/JetBrains/
+config/Thunar/
+config/autostart/
+config/chromium/
+config/dconf/
+config/mimeapps.list
+config/pulse/
+config/xfce4/
+vim/.netrwhist
