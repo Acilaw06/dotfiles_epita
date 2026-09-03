@@ -29,3 +29,6 @@ export EDITOR=vim
 alias ls='ls --color=auto'
 alias grep='grep --color -n'
 PS1='[\u@\h \W]\$ '
+export PATH=/run/current-system/sw/bin:/run/wrappers/bin:/home/alexandre.benoit/.nix-profile/bin:/nix/profile/bin:/home/alexandre.benoit/.local/state/nix/profile/bin:/etc/profiles/per-user/alexandre.benoit/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin
+
+hyfetch
