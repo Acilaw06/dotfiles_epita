@@ -25,7 +25,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 ############ Wallpaper
 
-exec --no-startup-id feh --bg-scale '/afs/cri.epita.fr/user/a/al/alexandre.benoit/u/.confs/config/i3/wallpaper.jpg'
+exec --no-startup-id feh --bg-scale '/afs/cri.epita.fr/user/a/al/alexandre.benoit/u/.confs/config/i3/wallpaper2.jpg'
 
 ############ Startup Script
 
