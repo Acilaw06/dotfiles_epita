@@ -1,0 +1,11 @@
+{
+    "auth_sha256": "db5e59fd9cf12e6c1da50259eeb4ccda6e4a4915ac792e4268d841f03a732ea8",
+    "channel_id": "UCxPE18WEfeNEo8tx3kyhDGg",
+    "handle": "@alexandrebenoit1475",
+    "name": "Alexandre",
+    "revision": "61ee2b41539a2490b4cd44e2dfff951f",
+    "schema_version": 1,
+    "stream_sha256": "1bc2a368061706f6400dde4410e6c1b9e45750c4000970c92c30c705fd17e12d",
+    "verified": true,
+    "x-goog-authuser": "0"
+}

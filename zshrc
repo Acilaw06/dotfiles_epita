@@ -29,7 +29,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export NNTPSERVER="news.epita.fr"
-export EDITOR=vim
+#export EDITOR=vim
 
 
 ###############
@@ -41,7 +41,8 @@ alias la='eza -a --icons --group-directories-first'
 alias ll='eza -alF --icons --group-directories-first'
 alias cls='clear'
 alias grep='grep --color=auto -n'
-
+alias cat='bat'
+alias vim='hx'
 
 ################
 ### STARSHIP ###

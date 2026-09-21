@@ -1,0 +1,74 @@
+2026-09-12 20:01:14 [WARNING] [MainThread] ytm_player.app._session: Session was never restored this run — not overwriting session.json
+2026-09-12 20:01:25 [WARNING] [MainThread] ytm_player.app._session: Session was never restored this run — not overwriting session.json
+2026-09-12 20:05:28 [ERROR] [MainThread] ytm_player.services.ytmusic: ytmusicapi call failed (func=get_playlist, consecutive_failures=1)
+Traceback (most recent call last):
+  File "/nix/store/dpj27lpp90flfmgb3dja7wqvrqr4mf2m-python3.13-ytmusicapi-1.12.2/lib/python3.13/site-packages/ytmusicapi/navigation.py", line 140, in nav
+    root = root[k]
+           ~~~~^^^
+KeyError: 'contents'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/nix/store/041pnd3i6valiry6glmiwgls0zzdyq60-ytm-player-2.1.0/lib/python3.13/site-packages/ytm_player/services/ytmusic.py", line 342, in _run
+    result = await asyncio.wait_for(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/nix/store/7jydrdpxlsqjdlrxxxy15i5vw4bad4rs-python3-3.13.15/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/7jydrdpxlsqjdlrxxxy15i5vw4bad4rs-python3-3.13.15/lib/python3.13/asyncio/threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7jydrdpxlsqjdlrxxxy15i5vw4bad4rs-python3-3.13.15/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/nix/store/dpj27lpp90flfmgb3dja7wqvrqr4mf2m-python3.13-ytmusicapi-1.12.2/lib/python3.13/site-packages/ytmusicapi/mixins/playlists.py", line 157, in get_playlist
+    header_data = nav(response, [*TWO_COLUMN_RENDERER, *TAB_CONTENT, *SECTION_LIST_ITEM])
+  File "/nix/store/dpj27lpp90flfmgb3dja7wqvrqr4mf2m-python3.13-ytmusicapi-1.12.2/lib/python3.13/site-packages/ytmusicapi/navigation.py", line 144, in nav
+    raise type(e)(f"Unable to find '{k}' using path {items!r} on {root!r}, exception: {e}")
+KeyError: "Unable to find 'contents' using path ['contents', 'twoColumnBrowseResultsRenderer', 'tabs', 0, 'tabRenderer', 'content', 'sectionListRenderer', 'contents', 0] on {'responseContext': {'serviceTrackingParams': [{'service': 'GFEEDBACK', 'params': [{'key': 'browse_id', 'value': 'VLRDEMaYDnWhHgHSChlgM_uAoOsQ'}, {'key': 'browse_id_prefix', 'value': ''}, {'key': 'logged_in', 'value': '1'}]}, {'service': 'CSI', 'params': [{'key': 'c', 'value': 'WEB_REMIX'}, {'key': 'cver', 'value': '1.20260912.01.00'}, {'key': 'yt_li', 'value': '1'}, {'key': 'GetBrowsePlaylistDetailPage_rid', 'value': '0x41ef0c5ad56939d1'}]}, {'service': 'ECATCHER', 'params': [{'key': 'client.version', 'value': '1.20000101'}, {'key': 'client.name', 'value': 'WEB_REMIX'}]}], 'responseId': 'IhMI7diU3tDplgMVyURPBB0r8jGB'}, 'trackingParams': 'CAAQhGciEwjt2JTe0OmWAxXJRE8EHSvyMYHKAQS_OzZh', 'microformat': {'microformatDataRenderer': {'noindex': True}}}, exception: 'contents'"
+2026-09-12 20:05:28 [ERROR] [MainThread] ytm_player.services.ytmusic: get_playlist failed for 'RDEMaYDnWhHgHSChlgM_uAoOsQ'
+Traceback (most recent call last):
+  File "/nix/store/dpj27lpp90flfmgb3dja7wqvrqr4mf2m-python3.13-ytmusicapi-1.12.2/lib/python3.13/site-packages/ytmusicapi/navigation.py", line 140, in nav
+    root = root[k]
+           ~~~~^^^
+KeyError: 'contents'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/nix/store/041pnd3i6valiry6glmiwgls0zzdyq60-ytm-player-2.1.0/lib/python3.13/site-packages/ytm_player/services/ytmusic.py", line 575, in get_playlist
+    return await self._get_playlist_ordered(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        client, playlist_id, params, limit=limit, timeout=timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/041pnd3i6valiry6glmiwgls0zzdyq60-ytm-player-2.1.0/lib/python3.13/site-packages/ytm_player/services/ytmusic.py", line 630, in _get_playlist_ordered
+    return await self._run(
+           ^^^^^^^^^^^^^^^^
+        client.get_playlist, playlist_id, timeout=timeout, limit=limit
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nix/store/041pnd3i6valiry6glmiwgls0zzdyq60-ytm-player-2.1.0/lib/python3.13/site-packages/ytm_player/services/ytmusic.py", line 342, in _run
+    result = await asyncio.wait_for(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/nix/store/7jydrdpxlsqjdlrxxxy15i5vw4bad4rs-python3-3.13.15/lib/python3.13/asyncio/tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/nix/store/7jydrdpxlsqjdlrxxxy15i5vw4bad4rs-python3-3.13.15/lib/python3.13/asyncio/threads.py", line 26, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/7jydrdpxlsqjdlrxxxy15i5vw4bad4rs-python3-3.13.15/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/nix/store/dpj27lpp90flfmgb3dja7wqvrqr4mf2m-python3.13-ytmusicapi-1.12.2/lib/python3.13/site-packages/ytmusicapi/mixins/playlists.py", line 157, in get_playlist
+    header_data = nav(response, [*TWO_COLUMN_RENDERER, *TAB_CONTENT, *SECTION_LIST_ITEM])
+  File "/nix/store/dpj27lpp90flfmgb3dja7wqvrqr4mf2m-python3.13-ytmusicapi-1.12.2/lib/python3.13/site-packages/ytmusicapi/navigation.py", line 144, in nav
+    raise type(e)(f"Unable to find '{k}' using path {items!r} on {root!r}, exception: {e}")
+KeyError: "Unable to find 'contents' using path ['contents', 'twoColumnBrowseResultsRenderer', 'tabs', 0, 'tabRenderer', 'content', 'sectionListRenderer', 'contents', 0] on {'responseContext': {'serviceTrackingParams': [{'service': 'GFEEDBACK', 'params': [{'key': 'browse_id', 'value': 'VLRDEMaYDnWhHgHSChlgM_uAoOsQ'}, {'key': 'browse_id_prefix', 'value': ''}, {'key': 'logged_in', 'value': '1'}]}, {'service': 'CSI', 'params': [{'key': 'c', 'value': 'WEB_REMIX'}, {'key': 'cver', 'value': '1.20260912.01.00'}, {'key': 'yt_li', 'value': '1'}, {'key': 'GetBrowsePlaylistDetailPage_rid', 'value': '0x41ef0c5ad56939d1'}]}, {'service': 'ECATCHER', 'params': [{'key': 'client.version', 'value': '1.20000101'}, {'key': 'client.name', 'value': 'WEB_REMIX'}]}], 'responseId': 'IhMI7diU3tDplgMVyURPBB0r8jGB'}, 'trackingParams': 'CAAQhGciEwjt2JTe0OmWAxXJRE8EHSvyMYHKAQS_OzZh', 'microformat': {'microformatDataRenderer': {'noindex': True}}}, exception: 'contents'"
